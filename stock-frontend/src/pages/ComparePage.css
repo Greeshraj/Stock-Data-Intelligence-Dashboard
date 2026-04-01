@@ -1,0 +1,134 @@
+/* @import "../components/ChartSection.css"; */
+/* 🔥 MAIN CONTAINER */
+.main-container {
+  width: 100%;
+  max-width: 1200px;   /* limit full width */
+  margin: -20px auto 0 auto;  /* 🔥 removes top gap + centers */
+  padding: 0 20px;
+}
+
+/* 🔽 CONTROLS */
+.compare-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* 📦 CONTENT LAYOUT */
+.content {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* 📊 CHART BOX */
+.chart-box {
+  flex: 2;  /* takes ~65% width */
+  background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* 📊 RIGHT PANEL */
+.right-panel {
+  flex: 1;  /* takes ~35% width */
+}
+
+/* 📊 METRICS BOX */
+.metrics-box {
+  background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* 📊 INDIVIDUAL METRIC */
+.metric {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: #cbd5f5;
+}
+
+/* 🔥 INSIGHT BOX */
+.insight-box {
+  margin-top: 12px;
+  padding: 10px;
+  background: #1e293b;
+  border-left: 4px solid #22c55e;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+/* 🎯 HIGHLIGHTS */
+.highlight.green {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.highlight.red {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.highlight.yellow {
+  color: #facc15;
+  font-weight: bold;
+}
+
+
+/* 🔽 SELECT DROPDOWN */
+.compare-controls select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #e2e8f0;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+.compare-controls select:hover {
+  border-color: #3b82f6;
+}
+
+/* FOCUS */
+.compare-controls select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* DROPDOWN OPTIONS */
+.compare-controls option {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+.compare-controls .compare-btn {
+  padding: 10px 16px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.compare-controls .compare-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+.compare-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
