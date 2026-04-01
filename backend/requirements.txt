@@ -1,0 +1,7 @@
+# Backend Python requirements for the API
+fastapi
+uvicorn[standard]
+pandas
+yfinance
+numpy
+scikit-learn
