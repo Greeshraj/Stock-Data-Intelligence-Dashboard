@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+const BACKEND_URL = "https://stock-data-dashboard-backend.onrender.com"
+// const BACKEND_URL = "http://127.0.0.1:8000"
 function Sidebar({ selectedStock, setSelectedStock }) {
   const [stocks, setStocks] = useState([]);
   const [search, setSearch] = useState("");
@@ -10,7 +11,7 @@ function Sidebar({ selectedStock, setSelectedStock }) {
     const fetchStocks = async () => {
       try {
         const res = await axios.get(
-          `http://127.0.0.1:8000/stocks?search=${search}`
+          `${BACKEND_URL}/stocks?search=${search}`
         );
         setStocks(res.data);
       } catch (err) {

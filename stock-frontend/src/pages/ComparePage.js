@@ -23,6 +23,8 @@ ChartJS.register(
     Legend
 );
 
+const BACKEND_URL = "https://stock-data-dashboard-backend.onrender.com"
+// const BACKEND_URL = "http://127.0.0.1:8000"
 const STOCKS = ["INFY", "TCS", "RELIANCE", "HDFCBANK", "ICICIBANK", "SBIN", "LT"];
 
 function ComparePage() {
@@ -46,7 +48,7 @@ function ComparePage() {
             setInsight("");
 
             const res = await axios.get(
-                `http://127.0.0.1:8000/compare?symbol1=${symbol1}&symbol2=${symbol2}`
+                `${BACKEND_URL}/compare?symbol1=${symbol1}&symbol2=${symbol2}`
             );
 
             setChart(res.data.chart || []);

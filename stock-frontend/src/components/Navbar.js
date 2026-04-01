@@ -3,6 +3,9 @@ import axios from "axios";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 
+const BACKEND_URL = "https://stock-data-dashboard-backend.onrender.com"
+// const BACKEND_URL = "http://127.0.0.1:8000"
+
 function Navbar({ theme }) {
   const [gainers, setGainers] = useState([]);
   const [losers, setLosers] = useState([]);
@@ -10,9 +13,10 @@ const navigate = useNavigate();
   useEffect(() => {
     const fetchTopStocks = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/topstocks");
+        const res = await axios.get(`${BACKEND_URL}/topstocks`);
         setGainers(res.data.top_gainers);
         setLosers(res.data.top_losers);
+        console.log("Gainers:", res.data.top_gainers);
       } catch (err) {
         console.error("Error fetching top stocks", err);
       }

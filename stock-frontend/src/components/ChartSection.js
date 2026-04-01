@@ -23,6 +23,9 @@ ChartJS.register(
   Legend
 );
 
+const BACKEND_URL = "https://stock-data-dashboard-backend.onrender.com"
+// const BACKEND_URL = "http://127.0.0.1:8000"
+
 function ChartSection({ stock }) {
   const [data, setData] = useState([]);
   const [summary, setSummary] = useState(null);
@@ -38,7 +41,7 @@ function ChartSection({ stock }) {
       setPredictDays(0);
       setPrediction([]);
 
-      const res = await axios.get(`http://127.0.0.1:8000/data/${stock}`);
+      const res = await axios.get(`${BACKEND_URL}/data/${stock}`);
 
       setData(res.data.data);        // ✅ FIXED
       setSummary(res.data.summary);  // ✅ FIXED
